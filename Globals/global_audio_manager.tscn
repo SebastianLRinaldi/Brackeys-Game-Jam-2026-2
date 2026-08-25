@@ -3,4 +3,5 @@
 [ext_resource type="Script" uid="uid://dsso1bwmosmme" path="res://Globals/global_audio_manager.gd" id="1_846au"]
 
 [node name="GlobalAudioManager" type="Node2D" unique_id=324993885]
+process_mode = 3
 script = ExtResource("1_846au")
