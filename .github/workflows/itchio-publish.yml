@@ -26,7 +26,7 @@ jobs:
         uses: Ayowel/butler-to-itch@v1.3.1
         with:
           butler_key: ${{secrets.ITCHIO_TOKEN}}
-          itch_user: antzgames
+          itch_user: EpicDevGames
           itch_game: demo-brackeysgamejam2026-2
           version: ${{ github.ref_name }}
           files: "${{ steps.export.outputs.archive_directory }}/test-web.zip"
