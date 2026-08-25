@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cpv1sqbxj6523"]
+
+[ext_resource type="Script" uid="uid://kralypew06r4" path="res://Globals/global_transition.gd" id="1_6rv6t"]
+
+[node name="GlobalTransition" type="Node2D" unique_id=93261227]
+script = ExtResource("1_6rv6t")
+
+[node name="TransitionPlayer" type="AnimationPlayer" parent="." unique_id=1508046753]
+unique_name_in_owner = true
