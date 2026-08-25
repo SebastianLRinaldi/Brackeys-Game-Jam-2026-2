@@ -12,6 +12,7 @@ config_version=5
 
 config/name="BrackeysGameJam20262"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/bg_color=Color(0.16241169, 0.4465909, 0.44900215, 1)
 config/icon="res://icon.svg"
 
 [autoload]
