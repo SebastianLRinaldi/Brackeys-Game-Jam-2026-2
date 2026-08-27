@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://brwcdgltktnje"]
+
+[ext_resource type="PackedScene" uid="uid://d2oiqua7pl5dv" path="res://seb_test/desk.tscn" id="1_d0ipf"]
+[ext_resource type="PackedScene" uid="uid://cq4uqevuplcl2" path="res://player/player.tscn" id="1_k1l7w"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_d0ipf"]
+scenes/1/scene = ExtResource("1_d0ipf")
+
+[sub_resource type="TileSet" id="TileSet_n8gdj"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetScenesCollectionSource_d0ipf")
+
+[node name="TestA" type="Node2D" unique_id=2085942642]
+y_sort_enabled = true
+
+[node name="Y-SortLayer" type="TileMapLayer" parent="." unique_id=1138715652]
+y_sort_enabled = true
+position = Vector2(-252, -52)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 1, 0, 254, 255, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 252, 255, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0)
+tile_set = SubResource("TileSet_n8gdj")
+
+[node name="Y-Sort Nodes" type="Node2D" parent="." unique_id=1391844099]
+y_sort_enabled = true
+
+[node name="Player" parent="Y-Sort Nodes" unique_id=994225929 instance=ExtResource("1_k1l7w")]
+position = Vector2(-252, -52)
+
+[node name="Desk2" parent="Y-Sort Nodes" unique_id=922620525 instance=ExtResource("1_d0ipf")]
+
+[node name="Desk" parent="Y-Sort Nodes" unique_id=585055886 instance=ExtResource("1_d0ipf")]
+position = Vector2(-85, -92)

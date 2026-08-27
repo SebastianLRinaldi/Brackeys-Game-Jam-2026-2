@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://d2oiqua7pl5dv"]
+
+[ext_resource type="Texture2D" uid="uid://c6ut2pjhm332u" path="res://assets/art/all_assets.png" id="1_ebpvv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4thwg"]
+size = Vector2(42, 20)
+
+[node name="Desk" type="StaticBody2D" unique_id=179064291]
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=43251079]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=181791143]
+position = Vector2(0, 8)
+scale = Vector2(1.3359375, 1.3359375)
+texture = ExtResource("1_ebpvv")
+region_enabled = true
+region_rect = Rect2(16, 22, 32, 35)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=522579122]
+position = Vector2(-1, -13)
+scale = Vector2(1.0538464, 1.0538464)
+texture = ExtResource("1_ebpvv")
+region_enabled = true
+region_rect = Rect2(210, 18, 26, 27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=380079493]
+y_sort_enabled = true
+shape = SubResource("RectangleShape2D_4thwg")

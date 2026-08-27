@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://byhxkhh2fvxkr"]
+
+[ext_resource type="Script" uid="uid://x6bg6jq6wfqe" path="res://root.gd" id="1_pq8q7"]
+
+[node name="Root" type="Node2D" unique_id=1989928556]
+script = ExtResource("1_pq8q7")
+
+[node name="SceneSelect" type="ItemList" parent="." unique_id=1124350021]
+unique_name_in_owner = true
+offset_right = 269.0
+offset_bottom = 199.0
+
+[connection signal="item_activated" from="SceneSelect" to="." method="_on_scene_select_item_activated"]
