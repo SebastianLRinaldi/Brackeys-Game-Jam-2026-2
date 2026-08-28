@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://uq6kvkqhw6tw"]
+
+[ext_resource type="Script" uid="uid://k7qgwbiughyw" path="res://dual_grid_controller.gd" id="1_y8eh1"]
+
+[node name="DualGridController" type="Node2D" unique_id=792445416]
+script = ExtResource("1_y8eh1")
+
+[node name="WorldLayer" type="TileMapLayer" parent="." unique_id=780934240]
+visible = false
+
+[node name="DisplayLayer" type="TileMapLayer" parent="." unique_id=998484724]
+position = Vector2(-8, -8)
