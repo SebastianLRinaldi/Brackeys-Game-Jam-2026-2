@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d2oiqua7pl5dv" path="res://seb_test/desk.tscn" id="1_d0ipf"]
 [ext_resource type="PackedScene" uid="uid://cq4uqevuplcl2" path="res://player/player.tscn" id="1_k1l7w"]
+[ext_resource type="Script" uid="uid://c1oukxjgi1xvh" path="res://seb_test/clue_progression.gd" id="3_2dl5f"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_d0ipf"]
 scenes/1/scene = ExtResource("1_d0ipf")
@@ -29,3 +30,6 @@ position = Vector2(-252, -52)
 
 [node name="Desk" parent="Y-Sort Nodes" unique_id=585055886 instance=ExtResource("1_d0ipf")]
 position = Vector2(-85, -92)
+
+[node name="ClueProgression" type="Node2D" parent="." unique_id=877727139]
+script = ExtResource("3_2dl5f")
