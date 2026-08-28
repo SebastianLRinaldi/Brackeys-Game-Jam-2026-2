@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://duaubh3aemqdq"]
+
+[ext_resource type="Script" uid="uid://c1oukxjgi1xvh" path="res://seb_test/clue_progression.gd" id="1_4ajno"]
+
+[node name="ClueProgression" type="Node2D" unique_id=838738582]
+script = ExtResource("1_4ajno")
