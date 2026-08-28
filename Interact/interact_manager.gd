@@ -10,7 +10,7 @@ var active_areas = []
 var can_interact = true
 
 
-func register_area(area: InteractArea):
+func register_area(area: IntractArea):
 	active_areas.push_back(area)
 
 func unregister_area(area: InteractArea):
