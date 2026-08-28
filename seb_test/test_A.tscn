@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://brwcdgltktnje"]
 
+[ext_resource type="PackedScene" uid="uid://duaubh3aemqdq" path="res://seb_test/clue_progression.tscn" id="1_2dl5f"]
 [ext_resource type="PackedScene" uid="uid://d2oiqua7pl5dv" path="res://seb_test/desk.tscn" id="1_d0ipf"]
 [ext_resource type="PackedScene" uid="uid://cq4uqevuplcl2" path="res://player/player.tscn" id="1_k1l7w"]
 
@@ -12,6 +13,8 @@ sources/0 = SubResource("TileSetScenesCollectionSource_d0ipf")
 
 [node name="TestA" type="Node2D" unique_id=2085942642]
 y_sort_enabled = true
+
+[node name="ClueProgression" parent="." unique_id=838738582 instance=ExtResource("1_2dl5f")]
 
 [node name="Y-SortLayer" type="TileMapLayer" parent="." unique_id=1138715652]
 y_sort_enabled = true

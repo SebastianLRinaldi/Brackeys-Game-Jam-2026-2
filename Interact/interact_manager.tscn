@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dp6jmeqean3bh"]
 
-[ext_resource type="Script" uid="uid://ttcskjeu81i7" path="res://Interact/interact_manager.gd" id="1_1babi"]
+[ext_resource type="Script" uid="uid://ttcskjeu81i7" path="res://Interact/interact_manager.gd" id="1_6w3l6"]
 
 [node name="InteractManager" type="Node2D" unique_id=1921028803]
-script = ExtResource("1_1babi")
+script = ExtResource("1_6w3l6")
 
 [node name="Label" type="Label" parent="." unique_id=705148266]
 anchors_preset = 4
