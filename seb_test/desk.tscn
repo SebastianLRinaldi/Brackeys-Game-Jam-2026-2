@@ -1,11 +1,24 @@
 [gd_scene format=3 uid="uid://d2oiqua7pl5dv"]
 
+[ext_resource type="PackedScene" uid="uid://dldc2y8mkfltb" path="res://Interact/InteractArea/interact_area.tscn" id="1_4thwg"]
+[ext_resource type="Script" uid="uid://hmt3q8qck5nt" path="res://seb_test/desk.gd" id="1_71mal"]
 [ext_resource type="Texture2D" uid="uid://c6ut2pjhm332u" path="res://assets/art/all_assets.png" id="1_ebpvv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gx3r7"]
+radius = 55.00909
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4thwg"]
 size = Vector2(42, 20)
 
 [node name="Desk" type="StaticBody2D" unique_id=179064291]
+script = ExtResource("1_71mal")
+
+[node name="InteractArea" parent="." unique_id=556424535 instance=ExtResource("1_4thwg")]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=732200116]
+shape = SubResource("CircleShape2D_gx3r7")
+debug_color = Color(0.42907688, 0.45876682, 1, 0.41960785)
 
 [node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=43251079]
 anchors_preset = 8
@@ -37,3 +50,20 @@ region_rect = Rect2(210, 18, 26, 27)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=380079493]
 y_sort_enabled = true
 shape = SubResource("RectangleShape2D_4thwg")
+
+[node name="DialogLabel" type="Label" parent="." unique_id=1671742298]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -38.0
+offset_top = -49.0
+offset_right = 39.0
+offset_bottom = -26.0
+grow_horizontal = 2
+text = "SOME DIA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_exited" from="InteractArea" to="." method="_on_interact_area_body_exited"]
+[connection signal="interacted" from="InteractArea" to="." method="_on_interact_area_interacted"]

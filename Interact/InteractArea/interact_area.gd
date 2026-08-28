@@ -1,11 +1,13 @@
-extends Area2D
 class_name InteractArea
+extends Area2D
 
 
 @export var action_name: String = "interact"
 
-var interact: Callable = func():
-	pass
+#var interact: Callable = func():
+	#pass
+
+signal interacted
 
 
 func _on_body_entered(body):

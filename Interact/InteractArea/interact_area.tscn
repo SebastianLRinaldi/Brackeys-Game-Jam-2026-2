@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dldc2y8mkfltb"]
 
-[ext_resource type="Script" uid="uid://baysmmrv1i5j0" path="res://Interact/InteractArea/interact_area.gd" id="1_qq00n"]
+[ext_resource type="Script" uid="uid://baysmmrv1i5j0" path="res://Interact/InteractArea/interact_area.gd" id="1_024t8"]
 
 [node name="InteractArea" type="Area2D" unique_id=556424535]
-script = ExtResource("1_qq00n")
+script = ExtResource("1_024t8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

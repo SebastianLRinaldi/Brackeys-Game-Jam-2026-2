@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cswqhv67ci2fs"]
+
+[ext_resource type="Script" uid="uid://dikxkevgkipr5" path="res://Globals/global_dialog_manager.gd" id="1_7i4i2"]
+
+[node name="GlobalDialogManager" type="Node2D" unique_id=1640631014]
+script = ExtResource("1_7i4i2")
