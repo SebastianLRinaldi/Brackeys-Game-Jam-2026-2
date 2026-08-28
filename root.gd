@@ -2,8 +2,6 @@ extends Node2D
 
 @onready var scene_select: ItemList = %SceneSelect
 
-## TODO add you path like you would for any item list and then 
-## you can select to run it 
 var scene_paths: Array[String] = [
 	
 	"res://seb_test/test_A.tscn"
