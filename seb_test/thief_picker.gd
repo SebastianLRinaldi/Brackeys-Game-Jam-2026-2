@@ -14,9 +14,9 @@ func _ready() -> void:
 		var npc_idx = npc_list.add_item(npc)
 		var tooltip_msg = ""
 		if npc == "Boss":
-			tooltip_msg = "Did the " + npc + " steal my sandwhich?"
+			tooltip_msg = "Double Click the " + npc + " to report to HR"
 		else:
-			tooltip_msg = "Did " + npc + " steal my sandwhich?"
+			tooltip_msg = "Double Click " + npc + " to report to HR"
 		
 		npc_list.set_item_tooltip(npc_idx, tooltip_msg)
 
