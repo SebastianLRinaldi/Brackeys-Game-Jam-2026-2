@@ -122,6 +122,8 @@ theme_override_constants/margin_bottom = 10
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_vertical = 8
+good_scene_path = "uid://dce8bbry4bdcy"
+bad_scene_path = "uid://cxyrr7tthwwjd"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1847287293]
 position = Vector2(0, -12)

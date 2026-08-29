@@ -14,31 +14,30 @@ extends Node2D
 var chapter_num = 1
 
 var narrative = {
-	
 	1: {
 		"Fridge": {
-			"lines": ["Who Stole my sandwich!?"],
+			"lines": ["Who Stole my sandwich?!", "Someone will get fired over this", "..."],
 			"key_to_next_chapter": false
 		},
 		
 		"Dave": {
-			"lines": ["I saw MIKE, SARAH, and the BOSS eat a sandwich"],
+			"lines": ["Hey Bob!", "Someone stole your sandwich?", "I might of seen",  "MIKE, SARAH, and the BOSS", "eatting a sandwich", "That's all I know."],
 			"key_to_next_chapter": false
 		},
 		"Grace": {
-			"lines": ["I saw DAVE, MIKE, and the BOSS eat near the time it went missing "],
+			"lines": ["How you doing Bob!", "Someone stole your sandwich?", "I think I saw", "DAVE, MIKE, and the BOSS", "eatting near the time it went missing", "That's all I know."],
 			"key_to_next_chapter": false
 		},
 		"Mike": {
-			"lines": ["I saw DAVE, and GRACE eat out of their own lunchboxes "],
+			"lines": ["Good to see ya Bob!", "Someone stole your sandwich?", "I saw", "DAVE and GRACE", "eat out of their own lunchboxes", "That's all I know."],
 			"key_to_next_chapter": false
 		},
 		"Sarah": {
-			"lines": ["I saw either DAVE, GRACE,or MIKE steal it"],
+			"lines": ["Anything I can help you with?", "Someone stole your sandwich?", "If I had to guess...", "DAVE, GRACE, or MIKE could have stole it", "That's all I know."],
 			"key_to_next_chapter": false
 		},
 		"Boss": {
-			"lines": ["I didn't see anything as I went out for lunch"],
+			"lines": ["Hello Bob.", "Someone took your sandwich?", "That's a shame",  "I didn't see anything though",  "as I went out for lunch", "That's all I know."],
 			"key_to_next_chapter": false
 		}
 	},
@@ -130,8 +129,6 @@ var narrative = {
 			"key_to_next_chapter": true
 		}
 	}
-
-		
 }
 
 
@@ -145,15 +142,20 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func player_interacted_with(objects_name: String) -> String:
-	if not narrative.get(chapter_num):return "..."
-	if not objects_name in narrative.get(chapter_num):return "..."
-	print("Chapter #: ", chapter_num)
-	print(narrative.get(chapter_num).get(objects_name).get("lines")[0])
-	var text = narrative.get(chapter_num).get(objects_name).get("lines")[0]
+
+
+func player_interacted_with(objects_name: String) -> Array:
+	if not narrative.get(chapter_num):return []
+	if not objects_name in narrative.get(chapter_num):return []
+	#print("Chapter #: ", chapter_num)
+	#print(narrative.get(chapter_num).get(objects_name).get("lines")[0])
+	var dia_lines = narrative.get(chapter_num).get(objects_name).get("lines")
 	
 	if narrative.get(chapter_num).get(objects_name).get("key_to_next_chapter"):
-		chapter_num += 1
+		pass
 	
-	return text
+	
+		#chapter_num += 1
+	
+	return dia_lines
 		

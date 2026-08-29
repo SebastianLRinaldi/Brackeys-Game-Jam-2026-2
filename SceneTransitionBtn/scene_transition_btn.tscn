@@ -6,3 +6,5 @@
 [node name="SceneTransitionBtn" type="Button" unique_id=1726384709]
 theme = ExtResource("1_huia4")
 script = ExtResource("1_qgr18")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

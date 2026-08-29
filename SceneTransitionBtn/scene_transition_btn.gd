@@ -4,9 +4,9 @@ extends Button
 @export_file("*.tscn") var scene_path
 
 func _ready() -> void:
-	hide()
+	pass
+	#hide()
 
-func _on_next_level_pressed() -> void:
-	GlobalAudioManager.play_sfx(0)
+
+func _on_pressed() -> void:
 	GlobalTransition.change_scene_to(scene_path)
-	
