@@ -16,24 +16,29 @@ var chapter_num = 1
 var narrative = {
 	
 	1: {
+		"Fridge": {
+			"lines": ["Who Stole my sandwich!?"],
+			"key_to_next_chapter": false
+		},
+		
 		"Dave": {
-			"lines": ["I have the clue"],
-			"key_to_next_chapter": true
+			"lines": ["I saw MIKE, SARAH, and the BOSS eat a sandwich"],
+			"key_to_next_chapter": false
 		},
 		"Grace": {
-			"lines": ["I can't help you right now"],
+			"lines": ["I saw DAVE, MIKE, and the BOSS eat near the time it went missing "],
 			"key_to_next_chapter": false
 		},
 		"Mike": {
-			"lines": ["I can't help you right now"],
+			"lines": ["I saw DAVE, and GRACE eat out of their own lunchboxes "],
 			"key_to_next_chapter": false
 		},
 		"Sarah": {
-			"lines": ["I can't help you right now"],
+			"lines": ["I saw either DAVE, GRACE,or MIKE steal it"],
 			"key_to_next_chapter": false
 		},
-		"John": {
-			"lines": ["I can't help you right now"],
+		"Boss": {
+			"lines": ["I didn't see anything as I went out for lunch"],
 			"key_to_next_chapter": false
 		}
 	},
@@ -54,7 +59,7 @@ var narrative = {
 			"lines": ["I can't help you right now"],
 			"key_to_next_chapter": false
 		},
-		"John": {
+		"Boss": {
 			"lines": ["I can't help you right now"],
 			"key_to_next_chapter": false
 		}
@@ -76,7 +81,7 @@ var narrative = {
 			"lines": ["I can't help you right now"],
 			"key_to_next_chapter": false
 		},
-		"John": {
+		"Boss": {
 			"lines": ["I can't help you right now"],
 			"key_to_next_chapter": false
 		}
@@ -98,7 +103,7 @@ var narrative = {
 			"lines": ["I have the clue"],
 			"key_to_next_chapter": true
 		},
-		"John": {
+		"Boss": {
 			"lines": ["I can't help you right now"],
 			"key_to_next_chapter": false
 		}
@@ -120,7 +125,7 @@ var narrative = {
 			"lines": ["I can't help you right now"],
 			"key_to_next_chapter": false
 		},
-		"John": {
+		"Boss": {
 			"lines": ["I have the clue"],
 			"key_to_next_chapter": true
 		}

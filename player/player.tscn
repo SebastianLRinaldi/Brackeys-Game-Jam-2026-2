@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cq4uqevuplcl2"]
 
 [ext_resource type="Script" uid="uid://bavat2qmmaywr" path="res://player/player.gd" id="1_oul6g"]
+[ext_resource type="PackedScene" uid="uid://du4c8o5sfd0em" path="res://seb_test/thief_picker.tscn" id="2_g1dw6"]
 [ext_resource type="Texture2D" uid="uid://b6q40sk3onftr" path="res://assets/art/Office_Character_10.png" id="2_rkbax"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g1dw6"]
@@ -100,6 +101,27 @@ size = Vector2(25, 10)
 
 [node name="Player" type="CharacterBody2D" unique_id=994225929]
 script = ExtResource("1_oul6g")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1722415428]
+z_index = 99
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -180.0
+offset_right = 320.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ThiefPicker" parent="MarginContainer" unique_id=1288170457 instance=ExtResource("2_g1dw6")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 8
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1847287293]
 position = Vector2(0, -12)

@@ -3,21 +3,122 @@
 [ext_resource type="PackedScene" uid="uid://dldc2y8mkfltb" path="res://Interact/InteractArea/interact_area.tscn" id="1_4thwg"]
 [ext_resource type="Script" uid="uid://hmt3q8qck5nt" path="res://seb_test/desk.gd" id="1_71mal"]
 [ext_resource type="Texture2D" uid="uid://c6ut2pjhm332u" path="res://assets/art/all_assets.png" id="1_ebpvv"]
+[ext_resource type="Texture2D" uid="uid://d3cpkn5hiesfp" path="res://assets/art/Office_Characters.png" id="4_tytvx"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_gx3r7"]
-radius = 55.00909
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tytvx"]
+size = Vector2(54, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u81dn"]
+size = Vector2(178, 181)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4thwg"]
 size = Vector2(42, 20)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_u81dn"]
+atlas = ExtResource("4_tytvx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tho3o"]
+atlas = ExtResource("4_tytvx")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rko0"]
+atlas = ExtResource("4_tytvx")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w6tl"]
+atlas = ExtResource("4_tytvx")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lylh5"]
+atlas = ExtResource("4_tytvx")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dmqr"]
+atlas = ExtResource("4_tytvx")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tl5c"]
+atlas = ExtResource("4_tytvx")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rp8gb"]
+atlas = ExtResource("4_tytvx")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtfjb"]
+atlas = ExtResource("4_tytvx")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7m25"]
+atlas = ExtResource("4_tytvx")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_561hh"]
+atlas = ExtResource("4_tytvx")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yodfj"]
+atlas = ExtResource("4_tytvx")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gx3r7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u81dn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tho3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rko0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2w6tl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lylh5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dmqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tl5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rp8gb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtfjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7m25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_561hh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yodfj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Desk" type="StaticBody2D" unique_id=179064291]
 script = ExtResource("1_71mal")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=884472596]
+position = Vector2(0, 38.5)
+shape = SubResource("RectangleShape2D_tytvx")
 
 [node name="InteractArea" parent="." unique_id=556424535 instance=ExtResource("1_4thwg")]
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=732200116]
-shape = SubResource("CircleShape2D_gx3r7")
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_u81dn")
 debug_color = Color(0.42907688, 0.45876682, 1, 0.41960785)
 
 [node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=43251079]
@@ -57,13 +158,18 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -38.0
-offset_top = -49.0
+offset_top = -65.0
 offset_right = 39.0
-offset_bottom = -26.0
+offset_bottom = -42.0
 grow_horizontal = 2
 text = "SOME DIA"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="NPCSprite2D" type="AnimatedSprite2D" parent="." unique_id=334778091]
+position = Vector2(5, 34)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_gx3r7")
 
 [connection signal="body_exited" from="InteractArea" to="." method="_on_interact_area_body_exited"]
 [connection signal="interacted" from="InteractArea" to="." method="_on_interact_area_interacted"]

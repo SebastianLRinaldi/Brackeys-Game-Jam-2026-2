@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://du4c8o5sfd0em"]
+
+[ext_resource type="Script" uid="uid://g6eq01iolxia" path="res://seb_test/thief_picker.gd" id="1_tdb61"]
+
+[node name="ThiefPicker" type="Control" unique_id=1288170457]
+layout_mode = 3
+anchor_top = 0.83100003
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -299.16
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tdb61")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2117949946]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="NpcList" type="ItemList" parent="CenterContainer" unique_id=911049311]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Select who you think stole your delious sandwich"
+focus_mode = 0
+auto_width = true
+auto_height = true
+wraparound_items = false
+max_columns = 5
+
+[connection signal="item_activated" from="CenterContainer/NpcList" to="." method="_on_npc_list_item_activated"]

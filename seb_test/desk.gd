@@ -4,10 +4,26 @@ extends StaticBody2D
 @export var npc_name = ""
 @onready var interact_area: InteractArea = %InteractArea
 @onready var dialog_label: Label = %DialogLabel
+@onready var npc_sprite_2d: AnimatedSprite2D = $NPCSprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	dialog_label.hide()
+	if npc_name:
+		interact_area.action_name = "interact with " + npc_name
+	
+	match npc_name:
+		"Dave":
+			npc_sprite_2d.frame = 10
+		"Grace":
+			npc_sprite_2d.frame = 5
+		"Mike":
+			npc_sprite_2d.frame = 2
+		"Sarah":
+			npc_sprite_2d.frame = 4
+		"Boss":
+			npc_sprite_2d.frame = 11
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
