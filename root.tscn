@@ -1,13 +1,40 @@
 [gd_scene format=3 uid="uid://byhxkhh2fvxkr"]
 
 [ext_resource type="Script" uid="uid://x6bg6jq6wfqe" path="res://root.gd" id="1_pq8q7"]
+[ext_resource type="PackedScene" uid="uid://bfbvi5vhawck0" path="res://SceneTransitionBtn/scene_transition_btn.tscn" id="2_pyidc"]
 
 [node name="Root" type="Node2D" unique_id=1989928556]
 script = ExtResource("1_pq8q7")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1694737059]
+offset_right = 710.0
+offset_bottom = 597.0
+color = Color(0.3942905, 0.3171867, 0.37015295, 1)
+
 [node name="SceneSelect" type="ItemList" parent="." unique_id=1124350021]
 unique_name_in_owner = true
-offset_right = 269.0
-offset_bottom = 199.0
+offset_left = 34.0
+offset_top = -225.0
+offset_right = 303.0
+offset_bottom = -26.0
+
+[node name="SceneTransitionBtn" parent="." unique_id=1726384709 instance=ExtResource("2_pyidc")]
+offset_left = 215.0
+offset_top = 115.0
+offset_right = 435.3871
+offset_bottom = 237.0
+text = "START"
+scene_path = "uid://brwcdgltktnje"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1335955962]
+offset_left = 90.0
+offset_top = 11.0
+offset_right = 553.0
+offset_bottom = 112.0
+bbcode_enabled = true
+text = "[center][wave amp=8 freq=2][font_size=32][outline_size=10][outline_color=#000000][b][color=#00E5FF]WHO STOLE MY [/color][color=#FF4081]SANDWICH[/color][/b][/outline_color][/outline_size][/font_size][/wave][/center]"
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="item_activated" from="SceneSelect" to="." method="_on_scene_select_item_activated"]

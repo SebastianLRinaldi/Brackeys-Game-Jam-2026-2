@@ -18,7 +18,8 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -212.0
-offset_bottom = 55.0
+offset_right = 8.0
+offset_bottom = 81.0
 grow_horizontal = 0
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -42,10 +43,14 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer2/MarginContainer/CenterContainer/VBoxContainer" unique_id=1255648600]
+custom_minimum_size = Vector2(200, 100)
+custom_maximum_size = Vector2(200, 100)
 layout_mode = 2
-text = "Who stole the Sandwich?"
+size_flags_vertical = 1
+text = "Double click to choose who stole the sandwich"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="NpcList" type="ItemList" parent="MarginContainer2/MarginContainer/CenterContainer/VBoxContainer" unique_id=911049311]
 unique_name_in_owner = true

@@ -12,8 +12,6 @@ extends Node2D
 #}
 
 
-
-
 var current_interact_name = null
 var prev_interact_name = null
 
@@ -96,6 +94,14 @@ var narrative = {
 	  {
 		"speaker": "BOB",
 		"text": "I’ll be toast."
+	  },
+	  {
+		"speaker": "BOB",
+		"text": "E to interact with people in the office"
+	  },
+		  {
+		"speaker": "BOB",
+		"text": "Arrow keys to move around the office"
 	  },
 	  {
 		"speaker": "",
@@ -187,7 +193,7 @@ var narrative = {
 	  },
 	  {
 		"speaker": "SARAH",
-		"text": "Well I saw Dave, Grave, and Mike looking awfully suspicious earlier."
+		"text": "Well I saw Dave, Grace, and Mike looking awfully suspicious earlier."
 	  },
 	  {
 		"speaker": "SARAH",
@@ -217,7 +223,11 @@ var narrative = {
 	  },
 	  {
 		"speaker": "BOSS",
-		"text": "Well unfortunately I was eatin’ steak and lobster at the diner down the street so I didn’t see anything. But let me know if you find ‘em and I’ll give them a stern talking to."
+		"text": "Well unfortunately I was eatin’ steak and lobster at the diner down the street so I didn’t see anything."
+	  },
+	  {
+		"speaker": "BOSS",
+		"text": "But let me know if you find ‘em and I’ll give them a stern talking to."
 	  },
 	  {
 		"speaker": "BOB",
@@ -332,15 +342,10 @@ func _process(delta: float) -> void:
 	pass
 
 
-
-
-
 var LETTER_TIME = 0.04
 var PUNCTUATION_TIME = 0.3
 var tween:Tween
 var dialogue_idx:int = 0
-
-
 
 
 func say(text:String):
