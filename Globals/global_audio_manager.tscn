@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://c0yqqhvg18s5j"]
 
 [ext_resource type="Script" uid="uid://dsso1bwmosmme" path="res://Globals/global_audio_manager.gd" id="1_846au"]
+[ext_resource type="AudioStream" uid="uid://c81vaydwmawt4" path="res://assets/sfx/btn_press.wav" id="2_xdt63"]
+[ext_resource type="AudioStream" uid="uid://bdld15ouvur0b" path="res://assets/sfx/synth.wav" id="3_gxsw4"]
+[ext_resource type="AudioStream" uid="uid://b7vtm300o2df4" path="res://assets/sfx/click.wav" id="4_y07p4"]
 
 [node name="GlobalAudioManager" type="Node2D" unique_id=324993885]
 process_mode = 3
 script = ExtResource("1_846au")
+sfx = Array[AudioStream]([ExtResource("2_xdt63"), ExtResource("3_gxsw4"), ExtResource("4_y07p4")])
+
+[node name="SFXPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1858097174]
+unique_name_in_owner = true
+bus = &"sfx"

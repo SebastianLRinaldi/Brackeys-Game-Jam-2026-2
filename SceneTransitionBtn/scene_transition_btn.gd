@@ -9,4 +9,5 @@ func _ready() -> void:
 
 
 func _on_pressed() -> void:
+	GlobalAudioManager.play_sfx(0)
 	GlobalTransition.change_scene_to(scene_path)

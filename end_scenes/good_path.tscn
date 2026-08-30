@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dce8bbry4bdcy"]
 
 [ext_resource type="PackedScene" uid="uid://bfbvi5vhawck0" path="res://SceneTransitionBtn/scene_transition_btn.tscn" id="1_16qj4"]
+[ext_resource type="Texture2D" uid="uid://q5j6e5xu8233" path="res://assets/art/Text Box-1.png.png" id="1_f1c51"]
 
 [node name="GoodPath" type="Control" unique_id=35205269]
 layout_mode = 3
@@ -18,14 +19,38 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=935825152]
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer" unique_id=1596703953]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Panel" type="Panel" parent="CenterContainer/MarginContainer" unique_id=1534315544]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=551517530]
-layout_mode = 2
-text = "The Boss was fired for stealing your sandwich"
+[node name="NinePatchRect" type="NinePatchRect" parent="CenterContainer/MarginContainer/Panel" unique_id=1900884865]
+modulate = Color(1, 1, 1, 0.47058824)
+layout_mode = 0
+offset_right = 436.0
+offset_bottom = 68.0
+texture = ExtResource("1_f1c51")
 
-[node name="SceneTransitionBtn" parent="CenterContainer/VBoxContainer" unique_id=1726384709 instance=ExtResource("1_16qj4")]
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer/MarginContainer" unique_id=844072353]
 layout_mode = 2
-text = "Main Menu"
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer/MarginContainer2" unique_id=935825152]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/MarginContainer2/VBoxContainer" unique_id=551517530]
+layout_mode = 2
+text = "You successfully to caught the sandwich thief. Nice job!"
+
+[node name="SceneTransitionBtn" parent="CenterContainer/MarginContainer/MarginContainer2/VBoxContainer" unique_id=1726384709 instance=ExtResource("1_16qj4")]
+layout_mode = 2
+text = "Thanks for Playing!"
 scene_path = "uid://byhxkhh2fvxkr"

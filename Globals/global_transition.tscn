@@ -1,10 +1,99 @@
 [gd_scene format=3 uid="uid://cpv1sqbxj6523"]
 
 [ext_resource type="Script" uid="uid://kralypew06r4" path="res://Globals/global_transition.gd" id="1_6rv6t"]
+[ext_resource type="Texture2D" uid="uid://q5j6e5xu8233" path="res://assets/art/Text Box-1.png.png" id="2_wo0jh"]
+
+[sub_resource type="Animation" id="Animation_wo0jh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/FilmStrip:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_8vc4g"]
+resource_name = "across"
+length = 3.0
+step = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_load_new_scene"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/FilmStrip:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6500.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_adrqb"]
+_data = {
+&"RESET": SubResource("Animation_wo0jh"),
+&"across": SubResource("Animation_8vc4g")
+}
 
 [node name="GlobalTransition" type="Node2D" unique_id=93261227]
 process_mode = 3
+z_index = 99
 script = ExtResource("1_6rv6t")
 
 [node name="TransitionPlayer" type="AnimationPlayer" parent="." unique_id=1508046753]
 unique_name_in_owner = true
+process_mode = 3
+libraries/ = SubResource("AnimationLibrary_adrqb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1741221562]
+
+[node name="FilmStrip" type="Node2D" parent="CanvasLayer" unique_id=1700931844]
+unique_name_in_owner = true
+
+[node name="TextBox1_png" type="Sprite2D" parent="CanvasLayer/FilmStrip" unique_id=451717273]
+z_index = 99
+position = Vector2(-800, 180.00002)
+scale = Vector2(11.25, 11.25)
+texture = ExtResource("2_wo0jh")
+metadata/_edit_lock_ = true
+
+[node name="TextBox1_png2" type="Sprite2D" parent="CanvasLayer/FilmStrip" unique_id=1894291673]
+z_index = 99
+position = Vector2(-3680, 180.00002)
+scale = Vector2(11.25, 11.25)
+texture = ExtResource("2_wo0jh")
+metadata/_edit_lock_ = true
+
+[node name="TextBox1_png3" type="Sprite2D" parent="CanvasLayer/FilmStrip" unique_id=505374644]
+z_index = 99
+position = Vector2(-5120, 180.00002)
+scale = Vector2(11.25, 11.25)
+texture = ExtResource("2_wo0jh")
+metadata/_edit_lock_ = true
+
+[node name="TextBox1_png4" type="Sprite2D" parent="CanvasLayer/FilmStrip" unique_id=513380428]
+z_index = 99
+position = Vector2(-2240, 180)
+scale = Vector2(11.25, 11.25)
+texture = ExtResource("2_wo0jh")
+metadata/_edit_lock_ = true

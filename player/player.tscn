@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://cq4uqevuplcl2"]
 
 [ext_resource type="Script" uid="uid://bavat2qmmaywr" path="res://player/player.gd" id="1_oul6g"]
+[ext_resource type="PackedScene" uid="uid://dce8bbry4bdcy" path="res://end_scenes/good_path.tscn" id="2_boad6"]
 [ext_resource type="PackedScene" uid="uid://du4c8o5sfd0em" path="res://seb_test/thief_picker.tscn" id="2_g1dw6"]
 [ext_resource type="Texture2D" uid="uid://b6q40sk3onftr" path="res://assets/art/Office_Character_10.png" id="2_rkbax"]
+[ext_resource type="PackedScene" uid="uid://cxyrr7tthwwjd" path="res://end_scenes/bad_scene.tscn" id="3_g6k8r"]
 [ext_resource type="Texture2D" uid="uid://chnm2d1yuq04j" path="res://assets/art/Bob .png" id="3_yw30f"]
+[ext_resource type="Texture2D" uid="uid://q5j6e5xu8233" path="res://assets/art/Text Box-1.png.png" id="5_qjkh3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wodsf"]
 atlas = ExtResource("3_yw30f")
@@ -605,12 +608,20 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
+[node name="GoodPathBtn" parent="MarginContainer" unique_id=35205269 instance=ExtResource("2_boad6")]
+unique_name_in_owner = true
+layout_mode = 2
+
 [node name="ThiefPicker" parent="MarginContainer" unique_id=1288170457 instance=ExtResource("2_g1dw6")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-good_scene_path = "uid://dce8bbry4bdcy"
-bad_scene_path = "uid://cxyrr7tthwwjd"
+good_talk_scene_path = "uid://cmtu6rvcp77gb"
+bad_talk_scene_path = "uid://dxpapff8r5uge"
+
+[node name="BadPathBtn" parent="MarginContainer" unique_id=1477290138 instance=ExtResource("3_g6k8r")]
+unique_name_in_owner = true
+layout_mode = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1847287293]
 position = Vector2(0, -12)
@@ -631,10 +642,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -230.0
+offset_left = -236.0
 offset_top = 89.0
-offset_right = 230.0
-offset_bottom = 158.0
+offset_right = 236.26666
+offset_bottom = 166.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 5
@@ -645,12 +656,19 @@ theme_override_constants/margin_bottom = 5
 [node name="Panel" type="Panel" parent="DialogContainer" unique_id=2069751227]
 layout_mode = 2
 
+[node name="NinePatchRect" type="NinePatchRect" parent="DialogContainer/Panel" unique_id=1473241074]
+modulate = Color(1, 1, 1, 0.47058824)
+layout_mode = 0
+offset_right = 462.0
+offset_bottom = 67.0
+texture = ExtResource("5_qjkh3")
+
 [node name="MarginContainer" type="MarginContainer" parent="DialogContainer" unique_id=1604453271]
 layout_mode = 2
 theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
+theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
+theme_override_constants/margin_bottom = 10
 
 [node name="HBoxContainer" type="HBoxContainer" parent="DialogContainer/MarginContainer" unique_id=1282850678]
 layout_mode = 2
@@ -661,6 +679,8 @@ custom_minimum_size = Vector2(52, 49)
 custom_maximum_size = Vector2(52, 49)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.96425694, 0.9186993, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.10033835, 0.031416662, 0.20097917, 0.38039216)
 text = "NAME: LARGY"
 autowrap_mode = 2
 
@@ -669,13 +689,17 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.96425694, 0.9186993, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.10033835, 0.031416662, 0.20097917, 0.38039216)
 text = "NAME: TEXT THIS IS A LOT OF TEXT TO READ WE NEED ABOUT TWO LINES WORTH NOT THREE"
 autowrap_mode = 2
 
 [node name="EndCharLabel" type="Label" parent="DialogContainer/MarginContainer/HBoxContainer" unique_id=953494910]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(10, 23)
-custom_maximum_size = Vector2(10, 23)
+custom_minimum_size = Vector2(12, 23)
+custom_maximum_size = Vector2(12, 23)
 layout_mode = 2
 size_flags_vertical = 8
-text = "V"
+theme_override_colors/font_color = Color(0.96425694, 0.9186993, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.10033835, 0.031416662, 0.20097917, 0.38039216)
+text = "E"

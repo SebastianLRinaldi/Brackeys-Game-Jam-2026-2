@@ -10,8 +10,8 @@ extends StaticBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if npc_name:
-		interact_area.action_name = "interact with " + npc_name
+	
+	interact_area.action_name = "interact with " + npc_name
 	
 	match npc_name:
 		"Dave":
@@ -26,6 +26,15 @@ func _ready() -> void:
 			npc_sprite_2d.frame = 11
 		"HR":
 			npc_sprite_2d.frame = 6
+		"Fail":
+			npc_sprite_2d.frame = 11
+			interact_area.action_name = "interact with Boss"
+		"Success":
+			npc_sprite_2d.frame = 11
+			interact_area.action_name = "interact with Boss"
+			
+		_:
+			print('UNKNOWN NPC AT DESK')
 	
 
 

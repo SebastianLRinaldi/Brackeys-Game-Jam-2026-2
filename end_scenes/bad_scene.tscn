@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cxyrr7tthwwjd"]
 
+[ext_resource type="Texture2D" uid="uid://q5j6e5xu8233" path="res://assets/art/Text Box-1.png.png" id="1_dtbku"]
 [ext_resource type="PackedScene" uid="uid://bfbvi5vhawck0" path="res://SceneTransitionBtn/scene_transition_btn.tscn" id="1_usc53"]
 
 [node name="BadScene" type="Control" unique_id=1477290138]
@@ -18,14 +19,36 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=267583484]
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer" unique_id=704977637]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Panel" type="Panel" parent="CenterContainer/MarginContainer2" unique_id=503019940]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1801137361]
+[node name="NinePatchRect" type="NinePatchRect" parent="CenterContainer/MarginContainer2" unique_id=858760669]
+modulate = Color(1, 1, 1, 0.47058824)
 layout_mode = 2
-text = "You were fired for accusing the wrong sandwich thief"
+texture = ExtResource("1_dtbku")
 
-[node name="SceneTransitionBtn" parent="CenterContainer/VBoxContainer" unique_id=1726384709 instance=ExtResource("1_usc53")]
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/MarginContainer2" unique_id=1356282828]
 layout_mode = 2
-text = "Retry?"
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer2/MarginContainer" unique_id=267583484]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer2/MarginContainer/VBoxContainer" unique_id=1801137361]
+layout_mode = 2
+text = "You failed to catch the Purp."
+
+[node name="SceneTransitionBtn" parent="CenterContainer/MarginContainer2/MarginContainer/VBoxContainer" unique_id=1726384709 instance=ExtResource("1_usc53")]
+layout_mode = 2
+text = "Try again?"
 scene_path = "uid://brwcdgltktnje"

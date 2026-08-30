@@ -1,7 +1,7 @@
 extends Control
 @onready var npc_list: ItemList = %NpcList
-@export_file("*.tscn") var good_scene_path
-@export_file("*.tscn") var bad_scene_path
+@export_file("*.tscn") var good_talk_scene_path
+@export_file("*.tscn") var bad_talk_scene_path
 
 var npcs: Array[String] = [
 	
@@ -26,8 +26,16 @@ func _on_npc_list_item_activated(index: int) -> void:
 	#GlobalTransition.change_scene_to(selected_path)
 	print("Selected as thief: ", selected_thief)
 	if selected_thief == "Boss":
-		GlobalTransition.change_scene_to(good_scene_path)
+		GlobalTransition.change_scene_to(good_talk_scene_path)
 	else:
-		GlobalTransition.change_scene_to(bad_scene_path)
+		GlobalTransition.change_scene_to(bad_talk_scene_path)
 	
 	
+
+
+func _on_npc_list_item_clicked(index: int, at_position: Vector2, mouse_button_index: int) -> void:
+	pass
+
+
+func _on_npc_list_item_selected(index: int) -> void:
+	GlobalAudioManager.play_sfx(2)

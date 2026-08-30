@@ -20,6 +20,8 @@ var name_label = null
 var end_char_label = null
 var dialog_container = null
 var thief_picker = null
+var good_path_btn = null
+var bad_path_btn = null
 
 var chapter_num = 1
 
@@ -101,7 +103,7 @@ var narrative = {
 	  },
 		  {
 		"speaker": "BOB",
-		"text": "Arrow keys to move around the office"
+		"text": "WASD or Arrow keys to move around the office"
 	  },
 	  {
 		"speaker": "",
@@ -288,8 +290,13 @@ var narrative = {
 	  },
 	  {
 		"speaker": "GAME",
-		"text": "You failed to catch the Purp. Try again?"
+		"text": "Bob was fired for false allegation"
 	  },
+	
+	  #{
+		#"speaker": "GAME",
+		#"text": "You failed to catch the Purp. Try again?"
+	  #},
 	  {
 		"speaker": "",
 		"text": ""
@@ -320,6 +327,14 @@ var narrative = {
 		"speaker": "BOB",
 		"text": "Sorry Boss man, Everyone knows Sarah's been on the drink ever since the incident… Can’t trust a word out of her mouth."
 	  },
+	  {
+		"speaker": "GAME",
+		"text": "The Boss was fired for stealing your sandwich"
+	  },
+	  #{
+		#"speaker": "GAME",
+		#"text": "You successfully to caught the sandwich thief. Nice job! Thanks for Playing!"
+	  #},
 	  {
 		"speaker": "",
 		"text": ""
@@ -398,7 +413,7 @@ func skip_or_next_dialog_line():
 	if tween and tween.is_running():
 		tween.kill()
 		dialog_label.visible_characters = -1
-		end_char_label.text = "V"
+		end_char_label.text = "E"
 	else:
 		var speaking_character = dialog_lines[dialogue_idx].get("speaker")
 		
@@ -426,9 +441,15 @@ func skip_or_next_dialog_line():
 			if speaking_character_line == "Who do you think stole your lunch?":
 				thief_picker.show()
 			
+			if speaking_character_line == "The Boss was fired for stealing your sandwich":
+				good_path_btn.show()
+			
+			if speaking_character_line == "Bob was fired for false allegation":
+				bad_path_btn.show()
+			
 			
 			await tween.finished
-			end_char_label.text = "V"
+			end_char_label.text = "E"
 			
 
 
