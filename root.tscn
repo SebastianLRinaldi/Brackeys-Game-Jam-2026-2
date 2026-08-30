@@ -10,6 +10,7 @@ script = ExtResource("1_pq8q7")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1694737059]
 offset_right = 710.0
 offset_bottom = 597.0
+mouse_filter = 2
 color = Color(0.3942905, 0.3171867, 0.37015295, 1)
 
 [node name="SceneSelect" type="ItemList" parent="." unique_id=1124350021]
