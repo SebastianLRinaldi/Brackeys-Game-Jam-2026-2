@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://x6bg6jq6wfqe" path="res://root.gd" id="1_pq8q7"]
 [ext_resource type="PackedScene" uid="uid://bfbvi5vhawck0" path="res://SceneTransitionBtn/scene_transition_btn.tscn" id="2_pyidc"]
+[ext_resource type="Texture2D" uid="uid://5dcbau00kexj" path="res://assets/art/Play-1.png.png" id="3_vvh5c"]
 
 [node name="Root" type="Node2D" unique_id=1989928556]
 script = ExtResource("1_pq8q7")
@@ -20,10 +21,15 @@ offset_bottom = -26.0
 
 [node name="SceneTransitionBtn" parent="." unique_id=1726384709 instance=ExtResource("2_pyidc")]
 offset_left = 215.0
-offset_top = 115.0
+offset_top = 173.0
 offset_right = 435.3871
 offset_bottom = 237.0
-text = "START"
+mouse_default_cursor_shape = 2
+theme_override_colors/icon_pressed_color = Color(0.88323545, 0.3738855, 0.8971082, 1)
+theme_override_colors/icon_hover_color = Color(0, 1, 0.9607843, 1)
+icon = ExtResource("3_vvh5c")
+icon_alignment = 1
+expand_icon = true
 scene_path = "uid://brwcdgltktnje"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1335955962]

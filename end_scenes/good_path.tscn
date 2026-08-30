@@ -54,3 +54,4 @@ text = "You successfully to caught the sandwich thief. Nice job!"
 layout_mode = 2
 text = "Thanks for Playing!"
 scene_path = "uid://byhxkhh2fvxkr"
+success_btn = true

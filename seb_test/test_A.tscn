@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://cb1i8esu4l8t8" path="res://assets/art/tiles.png" id="2_kro03"]
 [ext_resource type="PackedScene" uid="uid://b2dngtqctt8um" path="res://seb_test/desk_blank.tscn" id="3_da54y"]
 [ext_resource type="PackedScene" uid="uid://o0a7m05obmpt" path="res://seb_test/fridge.tscn" id="6_qis7x"]
+[ext_resource type="Texture2D" uid="uid://c6ut2pjhm332u" path="res://assets/art/all_assets.png" id="7_1w3jc"]
+[ext_resource type="Texture2D" uid="uid://c28hbwixuhtsa" path="res://assets/art/Desk.png" id="8_3rwp6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_da54y"]
 texture = ExtResource("2_kro03")
@@ -101,3 +103,97 @@ position = Vector2(864, -480)
 [node name="HRDesk" parent="Y-Sort Nodes" unique_id=1002162559 instance=ExtResource("1_d0ipf")]
 position = Vector2(-32, -352)
 npc_name = "HR"
+
+[node name="Plant" type="Sprite2D" parent="Y-Sort Nodes" unique_id=695107589]
+position = Vector2(724, 333)
+scale = Vector2(2.0333333, 2.0333333)
+texture = ExtResource("7_1w3jc")
+region_enabled = true
+region_rect = Rect2(176, 133, 15, 27)
+
+[node name="Plant2" type="Sprite2D" parent="Y-Sort Nodes" unique_id=699598207]
+position = Vector2(99, 330)
+scale = Vector2(2.0333333, 2.0333333)
+texture = ExtResource("7_1w3jc")
+region_enabled = true
+region_rect = Rect2(176, 133, 15, 27)
+
+[node name="Plant3" type="Sprite2D" parent="Y-Sort Nodes" unique_id=951709341]
+position = Vector2(749, -222)
+scale = Vector2(2.0333333, 2.0333333)
+texture = ExtResource("7_1w3jc")
+region_enabled = true
+region_rect = Rect2(176, 133, 15, 27)
+
+[node name="Plant4" type="Sprite2D" parent="Y-Sort Nodes" unique_id=489790255]
+position = Vector2(82, -223)
+scale = Vector2(2.0333333, 2.0333333)
+texture = ExtResource("7_1w3jc")
+region_enabled = true
+region_rect = Rect2(176, 133, 15, 27)
+
+[node name="Plant5" type="Sprite2D" parent="Y-Sort Nodes" unique_id=261723041]
+position = Vector2(272, -501)
+scale = Vector2(2.0333333, 2.0333333)
+texture = ExtResource("7_1w3jc")
+region_enabled = true
+region_rect = Rect2(176, 133, 15, 27)
+
+[node name="Plant6" type="Sprite2D" parent="Y-Sort Nodes" unique_id=629839023]
+position = Vector2(561.00006, -499)
+scale = Vector2(2.0333333, 2.0333333)
+texture = ExtResource("7_1w3jc")
+region_enabled = true
+region_rect = Rect2(176, 133, 15, 27)
+
+[node name="FloorItem7" type="Sprite2D" parent="Y-Sort Nodes" unique_id=1002359924]
+z_index = 1
+position = Vector2(-24.225279, -364.6044)
+scale = Vector2(0.37087992, 0.3208809)
+texture = ExtResource("8_3rwp6")
+region_enabled = true
+region_rect = Rect2(232, 176, 12, 10)
+
+[node name="FloorItem6" type="Sprite2D" parent="Y-Sort Nodes" unique_id=1185571546]
+z_index = 1
+position = Vector2(-24, -369)
+scale = Vector2(0.34291798, 0.34291804)
+texture = ExtResource("8_3rwp6")
+region_enabled = true
+region_rect = Rect2(232, 176, 12, 10)
+
+[node name="FloorItem5" type="Sprite2D" parent="Y-Sort Nodes" unique_id=236675066]
+z_index = 1
+position = Vector2(-26.000002, -372.99997)
+scale = Vector2(0.34291798, 0.34291804)
+texture = ExtResource("8_3rwp6")
+region_enabled = true
+region_rect = Rect2(232, 176, 12, 10)
+
+[node name="FloorItem" type="Sprite2D" parent="Y-Sort Nodes" unique_id=1198125915]
+position = Vector2(529, -349.00003)
+scale = Vector2(0.3833332, 0.38333324)
+texture = ExtResource("8_3rwp6")
+region_enabled = true
+region_rect = Rect2(266, 14, 30, 32)
+
+[node name="FloorItem3" type="Sprite2D" parent="Y-Sort Nodes" unique_id=2119967182]
+position = Vector2(560, 161)
+scale = Vector2(0.25925627, 0.25925627)
+texture = ExtResource("8_3rwp6")
+region_enabled = true
+region_rect = Rect2(86, 158, 18, 18)
+
+[node name="FloorItem2" type="Sprite2D" parent="Y-Sort Nodes" unique_id=395432072]
+position = Vector2(304.00003, -94)
+scale = Vector2(0.33333334, 0.33333334)
+texture = ExtResource("8_3rwp6")
+region_enabled = true
+region_rect = Rect2(86, 158, 18, 18)
+
+[node name="FloorItem4" type="Sprite2D" parent="Y-Sort Nodes" unique_id=1818851368]
+position = Vector2(528, 161)
+scale = Vector2(0.34391332, 0.32962763)
+texture = ExtResource("8_3rwp6")
+region_enabled = true
+region_rect = Rect2(360, 138, 14, 20)

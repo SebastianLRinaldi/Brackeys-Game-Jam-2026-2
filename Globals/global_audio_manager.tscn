@@ -4,12 +4,21 @@
 [ext_resource type="AudioStream" uid="uid://c81vaydwmawt4" path="res://assets/sfx/btn_press.wav" id="2_xdt63"]
 [ext_resource type="AudioStream" uid="uid://bdld15ouvur0b" path="res://assets/sfx/synth.wav" id="3_gxsw4"]
 [ext_resource type="AudioStream" uid="uid://b7vtm300o2df4" path="res://assets/sfx/click.wav" id="4_y07p4"]
+[ext_resource type="AudioStream" uid="uid://uoyn75d8l77b" path="res://assets/sfx/yippy-short.mp3" id="5_7lcmb"]
+[ext_resource type="AudioStream" uid="uid://p4gbtube3bw6" path="res://assets/music/topsecretmusicnetwork-downtempo-detective-story-beat-135-bpm-288049.mp3" id="6_w36yh"]
 
 [node name="GlobalAudioManager" type="Node2D" unique_id=324993885]
 process_mode = 3
 script = ExtResource("1_846au")
-sfx = Array[AudioStream]([ExtResource("2_xdt63"), ExtResource("3_gxsw4"), ExtResource("4_y07p4")])
+sfx = Array[AudioStream]([ExtResource("2_xdt63"), ExtResource("3_gxsw4"), ExtResource("4_y07p4"), ExtResource("5_7lcmb")])
 
 [node name="SFXPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1858097174]
 unique_name_in_owner = true
 bus = &"sfx"
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=791713825]
+unique_name_in_owner = true
+stream = ExtResource("6_w36yh")
+autoplay = true
+bus = &"bg"
+parameters/looping = true
