@@ -59,3 +59,11 @@ position = Vector2(417, -418)
 y_sort_enabled = true
 position = Vector2(414, -611)
 npc_name = "Fail"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=381756335]
+z_index = -99
+offset_left = -837.0
+offset_top = -1052.0
+offset_right = 1578.0
+offset_bottom = 870.0
+color = Color(0, 0, 0, 1)
