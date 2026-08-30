@@ -58,6 +58,14 @@ sources/1 = SubResource("TileSetScenesCollectionSource_qis7x")
 [node name="TestA" type="Node2D" unique_id=2085942642]
 y_sort_enabled = true
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1773339453]
+z_index = -99
+offset_left = -837.0
+offset_top = -1052.0
+offset_right = 1578.0
+offset_bottom = 870.0
+color = Color(0, 0, 0, 1)
+
 [node name="ClueProgression" parent="." unique_id=838738582 instance=ExtResource("1_2dl5f")]
 
 [node name="FloorLayer" type="TileMapLayer" parent="." unique_id=202026639]
