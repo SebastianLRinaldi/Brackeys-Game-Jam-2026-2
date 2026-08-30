@@ -16,3 +16,5 @@ func _on_body_entered(body):
 
 func _on_body_exited(body):
 	InteractManager.unregister_area(self)
+	GlobalDialogManager.player_left_interact_area()
+	

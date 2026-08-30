@@ -152,24 +152,9 @@ region_rect = Rect2(210, 18, 26, 27)
 y_sort_enabled = true
 shape = SubResource("RectangleShape2D_4thwg")
 
-[node name="DialogLabel" type="Label" parent="." unique_id=1671742298]
-unique_name_in_owner = true
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -38.0
-offset_top = -65.0
-offset_right = 39.0
-offset_bottom = -42.0
-grow_horizontal = 2
-text = "SOME DIA"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="NPCSprite2D" type="AnimatedSprite2D" parent="." unique_id=334778091]
 position = Vector2(5, 34)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_gx3r7")
 
-[connection signal="body_exited" from="InteractArea" to="." method="_on_interact_area_body_exited"]
 [connection signal="interacted" from="InteractArea" to="." method="_on_interact_area_interacted"]

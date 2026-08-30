@@ -1,11 +1,24 @@
 extends CharacterBody2D
 
+@onready var thief_picker: Control = %ThiefPicker
+@onready var name_label: Label = %NameLabel
+@onready var dialog_label: Label = %DialogLabel
+@onready var end_char_label: Label = %EndCharLabel
+@onready var dialog_container: MarginContainer = $DialogContainer
+
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 func _ready() -> void:
 	InteractManager.player = self
+	thief_picker.hide()
+	GlobalDialogManager.thief_picker = self.thief_picker
+	GlobalDialogManager.name_label = self.name_label
+	GlobalDialogManager.dialog_label = self.dialog_label
+	GlobalDialogManager.end_char_label = self.end_char_label
+	GlobalDialogManager.dialog_container = self.dialog_container
+	dialog_container.hide()
 
 
 func _physics_process(delta: float) -> void:

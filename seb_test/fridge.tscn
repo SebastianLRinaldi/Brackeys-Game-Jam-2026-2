@@ -30,22 +30,5 @@ unique_name_in_owner = true
 position = Vector2(0, 21.333334)
 shape = SubResource("CircleShape2D_1w3jc")
 
-[node name="DialogLabel" type="Label" parent="." unique_id=1291627182]
-unique_name_in_owner = true
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -39.0
-offset_top = -73.0
-offset_right = 38.0
-offset_bottom = -50.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "SOME DIA"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [connection signal="body_exited" from="InteractArea" to="." method="_on_interact_area_body_exited"]
 [connection signal="interacted" from="InteractArea" to="." method="_on_interact_area_interacted"]

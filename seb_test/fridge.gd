@@ -55,19 +55,5 @@ func _ready() -> void:
 
 
 func _on_interact_area_interacted() -> void:
-	dialog_label.show()
-	var dialog_lines = GlobalDialogManager.player_interacted_with(object_name)
+	GlobalDialogManager.player_interacted_with(object_name)
 	
-	say(dialog_lines[dialogue_idx])
-	if dialog_lines.get(dialogue_idx + 1):
-		dialogue_idx += 1
-	else:
-		dialogue_idx = 0
-	
-	#for line in dialog_lines:
-		#var tween = create_tween()
-		#tween.tween_property(dialog_label, "text", line, 1.0).from("")
-
-
-func _on_interact_area_body_exited(body: Node2D) -> void:
-	dialog_label.hide()

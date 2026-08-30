@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://bfbvi5vhawck0"]
 
-[ext_resource type="Theme" uid="uid://cfshvvk8d5w0l" path="res://assets/base_theme.tres" id="1_huia4"]
 [ext_resource type="Script" uid="uid://b7d4ckmjnw6b1" path="res://SceneTransitionBtn/scene_transition_btn.gd" id="1_qgr18"]
 
 [node name="SceneTransitionBtn" type="Button" unique_id=1726384709]
-theme = ExtResource("1_huia4")
 script = ExtResource("1_qgr18")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
